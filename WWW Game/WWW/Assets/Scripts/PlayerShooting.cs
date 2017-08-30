@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour {
 
     public GameObject projectile;
-
+    public float offsetX = 0f;
+    public float offsetY = 0f;
     public float visualCd;
     public float cd = 5f;
     public string key;
@@ -17,7 +18,9 @@ public class PlayerShooting : MonoBehaviour {
         if(Input.GetButtonUp (key) && cdInt <= 0 )
         {
             cdInt = cd;
-            Instantiate(projectile, transform.position, transform.rotation);
+
+            Vector3 offset = transform.rotation * new Vector3(offsetX, offsetY, 0);
+            Instantiate(projectile, transform.position + offset, transform.rotation);
 
         }
         cdInt -= Time.deltaTime;
