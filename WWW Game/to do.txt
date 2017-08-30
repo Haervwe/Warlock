@@ -3,7 +3,8 @@
 -Borde del Mapa/Acantilado(Plataformers)
 -Los arboles ya sabe como hacerlos (No importa)
 -Escudo
--Golpe
+-Golpe - listo
+-vida y daño - listo
 -Dash
 -Comentar Código
 -
